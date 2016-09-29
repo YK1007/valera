@@ -1,0 +1,13 @@
+<manifest>
+  <remote name="github" fetch="https://github.com"/>
+  <remove-project name="platform/dalvik"/>
+  <project path="dalvik" remote="github" name="frankhuhu/valera_platform_dalvik" revision="jb-mr2-release"/>
+  <remove-project name="platform/external/apache-http"/>
+  <project path="external/apache-http" remote="github" name="frankhuhu/valera_platform_external_apache-http" revision="jb-mr2-release"/>
+  <remove-project name="platform/frameworks/base"/>
+  <project path="frameworks/base" remote="github" name="frankhuhu/valera_platform_frameworks_base" revision="jb-mr2-release"/>
+  <remove-project name="platform/hardware/ril"/>
+  <project path="hardware/ril" remote="github" name="frankhuhu/valera_platform_hardware_ril" revision="jb-mr2-release"/>
+  <remove-project name="platform/libcore"/>
+  <project path="libcore" remote="github" name="frankhuhu/valera_platform_libcore" revision="jb-mr2-release"/>
+</manifest>
