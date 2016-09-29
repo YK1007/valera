@@ -1,0 +1,55 @@
+# Mkyong
+#PKG=com.mkyong.android
+#MAIN=.MainActivity
+
+# Proximity
+#PKG=com.shaikhhamadali.blogspot.proximitysensor
+#MAIN=com.shaikhhamadali.blogspot.proximitysensor.ProximitySensor
+
+# Compass
+#PKG=com.example.compassapp
+#MAIN=com.example.compassapp.MainActivity
+
+# AnyMemo
+PKG=org.liberty.android.fantastischmemo
+MAIN=.ui.AnyMemo
+
+# Network Tutorial
+#PKG=com.example.android.networkusage
+#MAIN=com.example.android.networkusage.NetworkActivity
+
+# Npr News
+#PKG=org.npr.android.news
+#MAIN=.NewsListActivity
+
+# Https Example
+#PKG=com.example.httpsexample
+#MAIN=.MainActivity
+
+# Amazon
+#PKG=com.amazon.mShop.android
+#MAIN=com.amazon.mShop.home.HomeActivity
+
+# Yelp
+#PKG=com.yelp.android
+#MAIN=.ui.activities.RootActivity
+
+# Walmart
+#PKG=com.walmart.android
+#MAIN=com.walmart.android.app.main.MainActivity
+
+# Facebook
+#PKG=com.facebook.katana
+#MAIN=com.facebook.katana.LoginActivity
+
+# Priceline
+#PKG=com.priceline.android.negotiator
+#MAIN=.commons.activities.MainActivity
+
+# Uber
+#PKG=com.ubercab
+#MAIN=.UBUberActivity
+
+# Booking.com
+#PKG=com.booking
+#MAIN=.activity.StartActivity

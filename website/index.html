@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+    <![endif]-->
+    <!--[if (IE 7)&!(IEMobile)]>
+    <html class="no-js lt-ie9 lt-ie8" lang="en">
+        <![endif]-->
+        <!--[if (IE 8)&!(IEMobile)]>
+        <html class="no-js lt-ie9" lang="en">
+            <![endif]-->
+            <!--[if gt IE 8]><!--> 
+            <html class="no-js" lang="en">
+                <!--<![endif]-->
+                <head>
+                    <meta charset="utf-8">
+                    <title>VALERA</title>
+                    <meta name="description" content="Home page for the VALERA project at UC Riverside.">
+                    <meta name="keywords" content="">
+                    <!-- http://t.co/dKP3o1e -->
+                    <meta name="HandheldFriendly" content="True">
+                    <meta name="MobileOptimized" content="320">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <!-- Google Webfonts -->
+                    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+                    <!-- For all browsers -->
+                    <link rel="stylesheet" href="assets/css/main.min.css">
+                    <!--[if (lt IE 9) & (!IEMobile)]>
+                    <link rel="stylesheet" href="assets/css/ie.min.css">
+                    <![endif]-->
+                    <meta http-equiv="cleartype" content="on">
+                    <!-- Load Modernizr -->
+                    <script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+                </head>
+                <body class="page" itemscope itemtype="http://schema.org/WebPage">
+                    <!--[if lt IE 9]>
+                    <div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+                    <![endif]-->
+                    <div class="navigation-wrapper">
+                        <div class="site-name">
+                            <!-- <a href="/">VALERA Project</a> -->
+                        </div>
+                        <!-- /.site-name -->
+                        <div class="top-navigation">
+                            <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                <ul>
+                                    <li><a href="index.html" >Overview</a></li>
+                                    <li><a href="tutorial.html" >Tutorials</a></li>
+                                    <li><a href="publications.html" >Publications</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- /.top-navigation -->
+                    </div>
+                    <!-- /.navigation-wrapper -->
+                    <div id="main" role="main"  itemprop="mainContentOfPage">
+                        <div class="article-author-side">
+                            <!-- <img src="images/valera_logo.png" class="bio-photo" alt="bio photo"></a> -->
+                            <h3>VALERA</h3>
+                            <p>Versatile yet Lightweight Record-and-replay for Android</p>
+                        </div>
+                        <article itemscope itemtype="http://schema.org/CreativeWork">
+                            <h1 itemprop="name">Overview</h1>
+                            <div class="article-wrap" itemprop="text">
+                                <p>VALERA is a lightweighted record and replay framework for Android. Achieving effective
+				record-and-replay is a balancing act between accuracy and overhead.
+				On smartphones, the act is particularly complicated, because smartphone apps receive a
+				high-bandwidth stream of input (e.g., network, GPS, camera, microphone, touchscreen) and
+				concurrency events, but the stream has to be recorded and replayed with minimal overhead,
+				to avoid interfering with app execution.</p>
+				
+				<p>Prior record-and-replay approaches have focused on replaying machine instructions or system calls,
+				which is not a good fit on smartphones.
+				We propose a novel, stream-oriented record-and-replay approach which achieves high-accuracy and
+				low-overhead by aiming at a sweet spot: recording and replaying sensor and net- work input,
+				event schedules, and inter-app communication via intents. </p>
+				
+                                <p>To learn more about VALERA you can:</p>
+                                <ul>
+                                    <li>Read the <a href="tutorial.html">tutorial page</a> to learn how to use the tool</li>
+                                    <li>Read our <a href="publications.html">publications</a> to get more technical details</li>
+                                </ul>
+
+                                <h2>Demo</h2>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLicccXeEF7bCCbYDWA970DMnN56gTalmu" frameborder="0" allowfullscreen></iframe>
+                                
+                                <h2>People</h2>
+                                <table>
+                                    <tr valign="middle">
+                                        <td><b>UC Riverside</b></td>
+                                    </tr>
+                                    <tr valign="middle">
+                                        <td><a href="http://www.cs.ucr.edu/~yhu009/">Yongjian Hu</a></td>
+                                    </tr>
+                                    <tr valign="middle">
+                                        <td><a href="http://www.cs.ucr.edu/~mazim002/">Tanzirul Azim</a></td>
+                                    </tr>
+                                    <tr valign="middle">
+                                        <td><a href="http://www.cs.ucr.edu/~neamtiu/">Iulian Neamtiu</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- /.article-wrap -->
+                        </article>
+                    </div>
+                    <!-- /#index -->
+                    <div class="footer-wrap">
+                        <footer>
+                            <span></span>
+                        </footer>
+                    </div>
+                    <!-- /.footer-wrap -->
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+                    <script src="assets/js/scripts.min.js"></script>
+                </body>
+            </html>

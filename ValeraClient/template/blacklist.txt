@@ -1,0 +1,16 @@
+Landroid
+Lcom/android/internal
+Lcom/android/test/runner
+Ldalvik
+Ljava
+Ljavax
+Ljunit
+Lorg/apache/http
+Lorg/json
+Lorg/w3c/dom
+Lorg/w3c/dom/ls
+Lorg/xml/sax
+Lorg/xmlpull
+Lsun/misc/Unsafe
+Lvalera
+Llibcore

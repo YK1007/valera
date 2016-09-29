@@ -1,0 +1,2 @@
+# type 1: message contains callback. format: 1 <handler> <callback>
+# type 2: standard message handling with 'what'. format: 2 <handler> <what>

@@ -1,0 +1,49 @@
+1. Find the app in Fdroid and download the apk & source code tarball. 
+   Save them in the folder: ValeraClient/app/<appname>/
+
+2. Use apktool to extrace the apk. Use this command:
+        apktool d -s <apk_file>
+
+   In the extraced folder, open the AndroidManifest.xml. Search 'package' 
+   and 'MAIN' attribuate. For example, in the GhostCommander app, the package 
+   name is "com.ghostsq.commander" and the main is "android:name='.FileCommander'".
+   So the main entry is ".FileCommander".
+
+   Create a config file "ValeraClient/app/<appname>/config.txt". Save the package and main entry 
+   into this config file. Here is the template:
+        PKG=com.ghostsq.commander
+        MAIN=.FileCommander
+        TRACING=0
+        NETWORK_REPLAY=0
+        APP_HOME_DIR=/data/data/$PKG
+
+3. Install the app.
+        adb install <apk_file>
+
+4. Using EventRacer.
+4.1 Go to EventRacer's folder and run the script: analyse_app.sh <apk_path>
+    Run the app manually. Do not choose random exploration.
+    *Remember: After you finish exploring the app, click 'Home' to go to the home page.
+
+4.2 Create a testcase folder. e.g. "ValeraClient/app/<appname>/test1" and save ER_actionlog 
+    into this folder.
+
+5. Using Valera.
+5.1 Start the emulator by running the script:
+        cd Emualtor
+        ./start_emulator_x86.sh
+
+5.2 Make sure you're the root user.
+        adb root
+
+5.3 Start valera recording mode:
+        script/run.sh --config app/<appname>/config.txt --blacklist template/blacklist.txt --cmd record
+    Then follow the same click steps in EventRacer.
+    *Remember: After you finish exploring the app, click 'Home' to go to the home page.
+               Then click Ctrl-C once, valera will collect the data from the device.
+
+5.4 The result is saved in "ValeraClient/result" folder. Make sure that 'inputevent.bin' and 'record.trace.z'
+    are in "ValeraClient/result/valera/". Then save this 'result' folder to "ValeraClient/app/appname/test1".
+
+
+

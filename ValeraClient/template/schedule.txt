@@ -1,0 +1,2 @@
+# format: <handler> <handlerId> <callback> <what> <arg1> <arg2>
+# set callback to string "null" if this message do not have callbacks.
