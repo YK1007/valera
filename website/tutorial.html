@@ -234,13 +234,12 @@
                 </p>
 
                 <h4>Step 2: Recording</h4>
-                <p>If you use emulator images provided by VALERA, you can run the following command to start up the Android emulator. We have tested it on a 64 bit Ubuntu 14.04 machine.</p>
-                <p>
-                    <code>% ./start_emulator_x86.sh</code>
-                    <br>
-                </p>
+                <p>VALERA client side source code is in the following github page. Make sure TraceInflater and ValeraTrace sub-projects are correctly built. </p>
+                <p><a href="https://github.com/frankhuhu/valera">https://github.com/frankhuhu/valera</a></p>
+
                 <p>To start recording app execution, use the command below. </p>
                 <p>
+                    <code>% cd ValeraClient</code><br>
                     <code>% ./scripts/run.sh --config=config.txt --cmd=record</code>
                 </p>
                 <p>The script will automatically start the app. You just need to use the app as normal. Tap <code>CTRL + C</code> to stop recording when you finish running the app. The critical execution information, such as touch events, sensor events, IO data and schedules, will be logged properly.</p>
