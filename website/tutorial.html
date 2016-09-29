@@ -2,216 +2,282 @@
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
     <![endif]-->
-    <!--[if (IE 7)&!(IEMobile)]>
+<!--[if (IE 7)&!(IEMobile)]>
     <html class="no-js lt-ie9 lt-ie8" lang="en">
         <![endif]-->
-        <!--[if (IE 8)&!(IEMobile)]>
+<!--[if (IE 8)&!(IEMobile)]>
         <html class="no-js lt-ie9" lang="en">
             <![endif]-->
-            <!--[if gt IE 8]><!--> 
-            <html class="no-js" lang="en">
-                <!--<![endif]-->
-                <head>
-                    <meta charset="utf-8">
-                    <title>VALERA</title>
-                    <meta name="description" content="Home page for the VALERA project at UC Riverside.">
-                    <meta name="keywords" content="">
-                    <!-- http://t.co/dKP3o1e -->
-                    <meta name="HandheldFriendly" content="True">
-                    <meta name="MobileOptimized" content="320">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <!-- Google Webfonts -->
-                    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-                    <!-- For all browsers -->
-                    <link rel="stylesheet" href="assets/css/main.min.css">
-                    <!--[if (lt IE 9) & (!IEMobile)]>
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>VALERA</title>
+    <meta name="description" content="Home page for the VALERA project at UC Riverside.">
+    <meta name="keywords" content="">
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
                     <link rel="stylesheet" href="assets/css/ie.min.css">
                     <![endif]-->
-                    <meta http-equiv="cleartype" content="on">
-                    <!-- Load Modernizr -->
-                    <script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
-                </head>
-                <body class="page" itemscope itemtype="http://schema.org/WebPage">
-                    <!--[if lt IE 9]>
+    <meta http-equiv="cleartype" content="on">
+    <!-- Load Modernizr -->
+    <script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+</head>
+
+<body class="page" itemscope itemtype="http://schema.org/WebPage">
+    <!--[if lt IE 9]>
                     <div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
                     <![endif]-->
-                    <div class="navigation-wrapper">
-                        <div class="site-name">
-                            <!-- <a href="/">VALERA Project</a> -->
-                        </div>
-                        <!-- /.site-name -->
-                        <div class="top-navigation">
-                            <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                                <ul>
-                                    <li><a href="index.html" >Overview</a></li>
-                                    <li><a href="tutorial.html" >Tutorials</a></li>
-                                    <li><a href="publications.html" >Publications</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- /.top-navigation -->
-                    </div>
-                    <!-- /.navigation-wrapper -->
-                    <div id="main" role="main"  itemprop="mainContentOfPage">
-                        <div class="article-author-side">
-                            <!-- <img src="images/valera_logo.png" class="bio-photo" alt="bio photo"></a> -->
-                            <h3>VALERA</h3>
-                            <p>Versatile yet Lightweight Record-and-replay for Android</p>
-                        </div>
-                        <article itemscope itemtype="http://schema.org/CreativeWork">
-                            <h1 itemprop="name">Tutorials</h1>
-			    
-                            <div class="article-wrap" itemprop="text">
-                                <ul>
-                                    <li><a href="#valera_emulator">Using VALERA on emulator</a></li>
-                                    <li><a href="#valera_source">Using VALERA on real Android devices</a></li>
-                                    <li><a href="#record_replay">Record and replay Android app</a></li>
-                                </ul>
-				
-                                <h3><a name="emulator"></a>Using VALERA on emulator</h3>
-				<p>We provide emulator version of modified Android framework which can be downloaded here(TODO: add link).
-				The emulator version images are test on 14.04 Ubuntu Linux (64 bit). You can run the following command
-				to start the emulator.
-				</p>
-				<p>
-				    <code>% ./start_emulator_x86.sh</code>
-				</p>
-				<p>
-				    The emulator fits most of the usage scenarios. In case the app uses hardware sensors (e.g. GPS,
-				    camera, audio etc), the app should run on real phone. You need to follow the instructions below
-				    to flash VALERA into Galaxy Nexus phone.
-				</p>
-				
-				<h3><a name="valera_source"></a>Using VALERA on real Android devices</h3>
-				<p>VALERA uses the "android-4.3_r1" tag of the Android source code.
-				You need to download Android source code first and test your build
-				environment works properly.</p>
-                                <p>
-				    <code>% mkdir -p ~/valera/valera-4.3_r1</code><br>
-				    <code>% cd ~/valera/valera-4.3_r1</code><br>
-				    <code>% repo init -u https://android.googlesource.com/platform/manifest -b android-4.3_r1</code><br>
-				    <code>% repo sync</code><br>
-				    <code>... wait</code><br>
-				</p>
-				<p>After the source code is downloaded, you need to apply the patch (TODO: add link and cmd)</p>
-				<p>
-				    <code>% apply patch</code>
-				</p>
-				<p>The Galaxy Nexus requires proprietary binaries not included in the AOSP release.
-				Download the drivers and extract the files into your source directory.</p>
-				<p>
-				    <code>% cd ~/valera/valera-4.3_r1</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/broadcom-maguro-jwr66y-5fa7715b.tgz</code><br>
-				    <code>% tar -zxvf broadcom-maguro-jwr66y-5fa7715b.tgz</code><br>
-				    <code>% ./extract-broadcom-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				    <code>...</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/imgtec-maguro-jwr66y-b0a4a1ef.tgz</code><br>
-				    <code>% tar -zxvf imgtec-maguro-jwr66y-b0a4a1ef.tgz</code><br>
-				    <code>% ./extract-imgtec-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				    <code>...</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/invensense-maguro-jwr66y-e0d2e531.tgz</code><br>
-				    <code>% tar -zxvf invensense-maguro-jwr66y-e0d2e531.tgz</code><br>
-				    <code>% ./extract-invensense-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				    <code>...</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/nxp-maguro-jwr66y-d8ac2804.tgz</code><br>
-				    <code>% tar -zxvf nxp-maguro-jwr66y-d8ac2804.tgz</code><br>
-				    <code>% ./extract-nxp-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				    <code>...</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/samsung-maguro-jwr66y-fb8f93b6.tgz</code><br>
-				    <code>% tar -zxvf samsung-maguro-jwr66y-fb8f93b6.tgz</code><br>
-				    <code>% ./extract-samsung-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				    <code>...</code><br>
-				    <code>% wget https://dl.google.com/dl/android/aosp/widevine-maguro-jwr66y-c49927ce.tgz</code><br>
-				    <code>% tar -zxvf widevine-maguro-jwr66y-c49927ce.tgz</code><br>
-				    <code>% ./extract-widevine-maguro.sh # (view the license and then type "I ACCEPT")</code><br>
-				</p>
-				<p>Next, we can build VALERA.</p>
-				<p>
-				    <code>% . build/envsetup.sh</code><br>
-				    <code>% lunch full_maguro-userdebug</code><br>
-				    <code>% make -j8</code><br>
-				</p>
-				<p>Finally, flash the images to the device</p>
-				<p>
-				    <code>% cd out/target/product/maguro</code><br>
-				    <code>% fastboot flash boot boot.img</code><br>
-				    <code>% fastboot flash system system.img</code><br>
-				    <code>% fastboot flash userdata userdata.img</code><br>
-				</p>
-				
-				<h3><a name="record_replay">Record and replay Android app</h3>
-                                <p>In this tutorial, we will use Nori app as an example. The apk can be downloaded from here(TODO: add link)</p>
+    <div class="navigation-wrapper">
+        <div class="site-name">
+            <!-- <a href="/">VALERA Project</a> -->
+        </div>
+        <!-- /.site-name -->
+        <div class="top-navigation">
+            <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="tutorial.html">Tutorials</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.top-navigation -->
+    </div>
+    <!-- /.navigation-wrapper -->
+    <div id="main" role="main" itemprop="mainContentOfPage">
+        <div class="article-author-side">
+            <!-- <img src="images/valera_logo.png" class="bio-photo" alt="bio photo"></a> -->
+            <h3>VALERA</h3>
+            <p>Versatile yet Lightweight Record-and-replay for Android</p>
+        </div>
+        <article itemscope itemtype="http://schema.org/CreativeWork">
+            <h1 itemprop="name">Tutorials</h1>
 
-                                <h4>Step 0: Initialization</h4>
-                                <p>First of all, give adb the root priviliage since VALERA will put some config files into the app's private
-                                folder. Then you should install the Nori app. Please run the following two commands:</p>
-                                <p>
-                                    <code>% adb root</code><br>
-                                    <code>% adb install nori.apk</code><br>
-                                </p>
+            <div class="article-wrap" itemprop="text">
+                <ul>
+                    <li><a href="#build">Build from AOSP</a></li>
+                    <li><a href="#valera_emulator">Using VALERA on emulator</a></li>
+                    <li><a href="#valera_device">Using VALERA on real Android devices</a></li>
+                    <li><a href="#record_replay">Record and replay Android app</a></li>
+                </ul>
 
-                                <h4>Step 1: Configuration</h4>
-                                <p>The configuration file should contain the package name and main entry activity of the app so that VALERA 
-                                script can start the app automatically. In addition, you can select to do tracing and record network connection. 
-                                The tracing option enables the dalvik vm to log every method entry and exit as well as branch instructions. 
-                                Thus the overhead is very high if you enable it for whole program tracing. We suggest to trace just for a few 
-                                looper actions that you are interested in. Here is the example configuration file for Nori app:</p>
-                                <p>
-                                    <code>PKG=pe.moe.nori</code><br>
-                                    <code>MAIN=pe.moe.nori.SearchActivity</code><br>
-                                    <code>TRACING=0</code><br>
-                                    <code>NETWORK_REPLAY=1</code><br>
-                                    <code>APP_HOME_DIR=/data/data/$PKG</code><br>
-                                </p>
+                <h3><a name="build"></a>Build from AOSP</h3>
+                <p>VALERA uses the "android-4.3_r1" version of the Android source code. You need to download Android source code first and test your build environment works properly.</p>
+                <p>
+                    <code>% mkdir -p ~/valera/valera-4.3_r1</code>
+                    <br>
+                    <code>% cd ~/valera/valera-4.3_r1</code>
+                    <br>
+                    <code>% repo init -u https://android.googlesource.com/platform/manifest -b android-4.3_r1</code>
+                    <br>
+                    <code>% repo sync</code>
+                    <br>
+                    <code>... wait</code>
+                    <br>
+                </p>
+                <p>After the source code is downloaded, you need to apply the patch for the AOSP source code. Copy and paste the following content into <code>.repo/local_manifests/local_manifest.xml</code></p>
+                <p>
+                    <code>
+&lt;manifest&gt;<br>
+  &nbsp;&nbsp; &lt;remote name="github" fetch="https://github.com"/&gt;<br>
+  &nbsp;&nbsp; &lt;remove-project name="platform/dalvik"/&gt;<br>
+  &nbsp;&nbsp; &lt;project path="dalvik" remote="github" name="frankhuhu/valera_platform_dalvik" revision="valera-4.3_r1"/&gt;<br>
+  &nbsp;&nbsp; &lt;remove-project name="platform/external/apache-http"/&gt;<br>
+  &nbsp;&nbsp; &lt;project path="external/apache-http" remote="github" name="frankhuhu/valera_platform_external_apache-http" revision="valera-4.3_r1"/&gt;<br>
+  &nbsp;&nbsp; &lt;remove-project name="platform/frameworks/base"/&gt;<br>
+  &nbsp;&nbsp; &lt;project path="frameworks/base" remote="github" name="frankhuhu/valera_platform_frameworks_base" revision="valera-4.3_r1"/&gt;<br>
+  &nbsp;&nbsp; &lt;remove-project name="platform/hardware/ril"/&gt;<br>
+  &nbsp;&nbsp; &lt;project path="hardware/ril" remote="github" name="frankhuhu/valera_platform_hardware_ril" revision="valera-4.3_r1"/&gt;<br>
+  &nbsp;&nbsp; &lt;remove-project name="platform/libcore"/&gt;<br>
+  &nbsp;&nbsp; &lt;project path="libcore" remote="github" name="frankhuhu/valera_platform_libcore" revision="valera-4.3_r1"/&gt;<br>
+&lt;/manifest&gt;
+                    </code>
+                </p>
+                <p>Next, pull the source code with version "valera-4.3_r1".</p>
+                <p>
+                    <code>
+                        % cd ~/valera/valera-4.3_r1<br>
+                        % repo sync<br>
+                        % repo forall dalvik libcore frameworks/base external/apache-http hardware/ril -c 'git checkout -b valera-4.3_r1 && git pull'<br>
+                    </code>
+                </p>
+                <p>Finally, build the AOSP project:</p>
+                <p>
+                    <code>
+                        % . build/envsetup.sh<br>
+                        % lunch<br>
+                        % make -j4<br>
+                    </code>
+                </p>
 
-                                <h4>Step 2: Recording</h4>
-                                <p>If you use emulator images provided by VALERA, you can run the following command to start up the Android emulator. 
-                                We have tested it on a 64 bit Ubuntu 14.04 machine.</p>
-                                <p>
-                                    <code>% ./start_emulator_x86.sh</code><br>
-                                </p>
-                                <p>To start recording app execution, use the command below. </p>
-                                <p>
-                                    <code>% ./scripts/run.sh --config=config.txt --cmd=record</code>
-                                </p>
-                                <p>The script will automatically start the app. You just need to use the app as normal. Tap <code>CTRL + C</code> 
-                                to stop recording when you finish running the app. The critical execution information, such as touch events, 
-                                sensor events, IO data and schedules, will be logged properly.</p>
 
-                                <h4>Step 3: Post processing</h4>
-                                <p>The result folder contains all the logged data. <code>inputevent.bin</code> includes all the touch screen events.
-                                <code>io.bin</code> record all the HTTP/HTTPS connection data if the network log option is speified in the configuration file.
-                                <code>record.trace & replay.trace</code> captures some important schedule information such as thread creation, internal 
-                                message posting etc.</p>
-                                <p>If you want fully deterministic schedule replay, i.e. all the actions executed on looper thread is the same during 
-                                record and replay, you can run the following command to extract the schedule:</p>
-                                <p>
-                                    <code>% java -jar ./bin/ValeraTool.jar generate_schedule record.trace > schedule.txt</code><br>
-                                </p>
-                                <p>Note that VALERA only ensure the deterministic replay of the specific app. Some events from system level services such as AMS, WMS 
-                                maybe missing during replay. Although VALERA runtime sets timeout during replay execution, it is suggested to filter out these 
-                                events in the schedule file thus not hurt the replay performance. Example of these events include <code>TRIM_MEMORY</code> event 
-                                from AMS, animation related events from WMS, and <code>onProgressUpdate</code> in AsyncTask.</p>
+                <h3><a name="valera_emulator"></a>Using VALERA on emulator</h3>
+                <p>You can run the following command to start the emulator. The emulator version images are test on 14.04 Ubuntu Linux (64 bit). </p>
+                <p>
+                    <code>% emulator</code>
+                </p>
+                <p>
+                    The emulator fits most of the usage scenarios. In case the app uses hardware sensors (e.g. GPS, camera, audio etc), the app should run on real phone. You need to follow the instructions below to flash VALERA into Galaxy Nexus phone.
+                </p>
 
-                                <h4>Step 4: Replaying</h4>
-                                <p>Replay is simple. You just need to specify config file and schedule file. Then run this command:</p>
-                                <p>
-                                    <code>% ./scripts/run.sh --config=config.txt --schedule=schedule.txt --cmd=replay</code>
-                                </p>
-                                <p>VALERA runtime will load the necessary data to the device and auto start replaying the app.</p>
-                            </div>
-                            <!-- /.article-wrap -->
-                        </article>
-                    </div>
-                    <!-- /#index -->
-                    <div class="footer-wrap">
-                        <footer>
-                            <span></span>
-                        </footer>
-                    </div>
-                    <!-- /.footer-wrap -->
-                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-                    <script src="assets/js/scripts.min.js"></script>
-                </body>
-            </html>
+
+
+                <h3><a name="valera_device"></a>Using VALERA on real Android devices</h3>
+                <p>We test VALERA on Galaxy Nexus. The Galaxy Nexus requires proprietary binaries not included in the AOSP release. Download the drivers and extract the files into your source directory.</p>
+                <p>
+                    <code>% cd ~/valera/valera-4.3_r1</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/broadcom-maguro-jwr66y-5fa7715b.tgz</code>
+                    <br>
+                    <code>% tar -zxvf broadcom-maguro-jwr66y-5fa7715b.tgz</code>
+                    <br>
+                    <code>% ./extract-broadcom-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                    <code>...</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/imgtec-maguro-jwr66y-b0a4a1ef.tgz</code>
+                    <br>
+                    <code>% tar -zxvf imgtec-maguro-jwr66y-b0a4a1ef.tgz</code>
+                    <br>
+                    <code>% ./extract-imgtec-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                    <code>...</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/invensense-maguro-jwr66y-e0d2e531.tgz</code>
+                    <br>
+                    <code>% tar -zxvf invensense-maguro-jwr66y-e0d2e531.tgz</code>
+                    <br>
+                    <code>% ./extract-invensense-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                    <code>...</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/nxp-maguro-jwr66y-d8ac2804.tgz</code>
+                    <br>
+                    <code>% tar -zxvf nxp-maguro-jwr66y-d8ac2804.tgz</code>
+                    <br>
+                    <code>% ./extract-nxp-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                    <code>...</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/samsung-maguro-jwr66y-fb8f93b6.tgz</code>
+                    <br>
+                    <code>% tar -zxvf samsung-maguro-jwr66y-fb8f93b6.tgz</code>
+                    <br>
+                    <code>% ./extract-samsung-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                    <code>...</code>
+                    <br>
+                    <code>% wget https://dl.google.com/dl/android/aosp/widevine-maguro-jwr66y-c49927ce.tgz</code>
+                    <br>
+                    <code>% tar -zxvf widevine-maguro-jwr66y-c49927ce.tgz</code>
+                    <br>
+                    <code>% ./extract-widevine-maguro.sh # (view the license and then type "I ACCEPT")</code>
+                    <br>
+                </p>
+                <p>Next, we can build VALERA.</p>
+                <p>
+                    <code>% . build/envsetup.sh</code>
+                    <br>
+                    <code>% lunch full_maguro-userdebug</code>
+                    <br>
+                    <code>% make -j8</code>
+                    <br>
+                </p>
+                <p>Finally, flash the images to the device</p>
+                <p>
+                    <code>% cd out/target/product/maguro</code>
+                    <br>
+                    <code>% fastboot flash boot boot.img</code>
+                    <br>
+                    <code>% fastboot flash system system.img</code>
+                    <br>
+                    <code>% fastboot flash userdata userdata.img</code>
+                    <br>
+                </p>
+
+                <h3><a name="record_replay">Record and replay Android app</h3>
+                    <p>In this tutorial, we will use Nori app as an example. The apk can be downloaded from: </p>
+                    <p><a href="https://f-droid.org/repo/io.github.tjg1.nori_8.apk">Nori.apk</a> </p>
+
+                <h4>Step 0: Initialization</h4>
+                <p>First of all, give adb the root priviliage since VALERA will put some config files into the app's private folder. Then you should install the Nori app. Please run the following two commands:</p>
+                <p>
+                    <code>% adb root</code>
+                    <br>
+                    <code>% adb install nori.apk</code>
+                    <br>
+                </p>
+
+                <h4>Step 1: Configuration</h4>
+                <p>The configuration file should contain the package name and main entry activity of the app so that VALERA script can start the app automatically. In addition, you can select to do tracing and record network connection. The tracing option enables the dalvik vm to log every method entry and exit as well as branch instructions. Thus the overhead is very high if you enable it for whole program tracing. We suggest to trace just for a few looper actions that you are interested in. Here is the example configuration file for Nori app:</p>
+                <p>
+                    <code>PKG=pe.moe.nori</code>
+                    <br>
+                    <code>MAIN=pe.moe.nori.SearchActivity</code>
+                    <br>
+                    <code>TRACING=0</code>
+                    <br>
+                    <code>NETWORK_REPLAY=1</code>
+                    <br>
+                    <code>APP_HOME_DIR=/data/data/$PKG</code>
+                    <br>
+                </p>
+
+                <h4>Step 2: Recording</h4>
+                <p>If you use emulator images provided by VALERA, you can run the following command to start up the Android emulator. We have tested it on a 64 bit Ubuntu 14.04 machine.</p>
+                <p>
+                    <code>% ./start_emulator_x86.sh</code>
+                    <br>
+                </p>
+                <p>To start recording app execution, use the command below. </p>
+                <p>
+                    <code>% ./scripts/run.sh --config=config.txt --cmd=record</code>
+                </p>
+                <p>The script will automatically start the app. You just need to use the app as normal. Tap <code>CTRL + C</code> to stop recording when you finish running the app. The critical execution information, such as touch events, sensor events, IO data and schedules, will be logged properly.</p>
+
+                <h4>Step 3: Post processing</h4>
+                <p>The result folder contains all the logged data. <code>inputevent.bin</code> includes all the touch screen events.
+                    <code>io.bin</code> record all the HTTP/HTTPS connection data if the network log option is speified in the configuration file.
+                    <code>record.trace & replay.trace</code> captures some important schedule information such as thread creation, internal message posting etc.</p>
+                <p>If you want fully deterministic schedule replay, i.e. all the actions executed on looper thread is the same during record and replay, you can run the following command to extract the schedule:</p>
+                <p>
+                    <code>% java -jar ./bin/ValeraTool.jar generate_schedule record.trace > schedule.txt</code>
+                    <br>
+                </p>
+                <p>Note that VALERA only ensure the deterministic replay of the specific app. Some events from system level services such as AMS, WMS maybe missing during replay. Although VALERA runtime sets timeout during replay execution, it is suggested to filter out these events in the schedule file thus not hurt the replay performance. Example of these events include <code>TRIM_MEMORY</code> event from AMS, animation related events from WMS, and <code>onProgressUpdate</code> in AsyncTask.</p>
+
+                <h4>Step 4: Replaying</h4>
+                <p>Replay is simple. You just need to specify config file and schedule file. Then run this command:</p>
+                <p>
+                    <code>% ./scripts/run.sh --config=config.txt --schedule=schedule.txt --cmd=replay</code>
+                </p>
+                <p>VALERA runtime will load the necessary data to the device and auto start replaying the app.</p>
+            </div>
+            <!-- /.article-wrap -->
+        </article>
+    </div>
+    <!-- /#index -->
+    <div class="footer-wrap">
+        <footer>
+            <span></span>
+        </footer>
+    </div>
+    <!-- /.footer-wrap -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+    <script src="assets/js/scripts.min.js"></script>
+</body>
+
+</html>
