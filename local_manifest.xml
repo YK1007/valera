@@ -1,13 +1,13 @@
 <manifest>
   <remote name="github" fetch="https://github.com"/>
   <remove-project name="platform/dalvik"/>
-  <project path="dalvik" remote="github" name="frankhuhu/valera_platform_dalvik" revision="jb-mr2-release"/>
+  <project path="dalvik" remote="github" name="frankhuhu/valera_platform_dalvik" revision="valera-4.3_r1"/>
   <remove-project name="platform/external/apache-http"/>
-  <project path="external/apache-http" remote="github" name="frankhuhu/valera_platform_external_apache-http" revision="jb-mr2-release"/>
+  <project path="external/apache-http" remote="github" name="frankhuhu/valera_platform_external_apache-http" revision="valera-4.3_r1"/>
   <remove-project name="platform/frameworks/base"/>
-  <project path="frameworks/base" remote="github" name="frankhuhu/valera_platform_frameworks_base" revision="jb-mr2-release"/>
+  <project path="frameworks/base" remote="github" name="frankhuhu/valera_platform_frameworks_base" revision="valera-4.3_r1"/>
   <remove-project name="platform/hardware/ril"/>
-  <project path="hardware/ril" remote="github" name="frankhuhu/valera_platform_hardware_ril" revision="jb-mr2-release"/>
+  <project path="hardware/ril" remote="github" name="frankhuhu/valera_platform_hardware_ril" revision="valera-4.3_r1"/>
   <remove-project name="platform/libcore"/>
-  <project path="libcore" remote="github" name="frankhuhu/valera_platform_libcore" revision="jb-mr2-release"/>
+  <project path="libcore" remote="github" name="frankhuhu/valera_platform_libcore" revision="valera-4.3_r1"/>
 </manifest>
